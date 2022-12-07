@@ -1,4 +1,4 @@
-# zellkonverter
+# docker-zellkonverter
 
 [![gh-actions-build-status](https://github.com/royfrancis/docker-zellkonverter/workflows/build/badge.svg)](https://github.com/royfrancis/docker-zellkonverter/actions?workflow=build) [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/royfrancis/zellkonverter?label=dockerhub)](https://hub.docker.com/repository/docker/royfrancis/zellkonverter)
 
@@ -10,6 +10,4 @@ Run this in a directory containing **file.h5ad**. The output file will be **sce.
 docker run --user "$(id -u):$(id -g)" --rm -v ${PWD}:/zell/work zellkonverter:1.8
 ```
 
----
-
-2023 • Roy Francis
+2022 • Roy Francis
