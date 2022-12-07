@@ -1,0 +1,11 @@
+library(zellkonverter)
+anndata <- reticulate::import("anndata")
+if(!file.exists("file.h5ad")) stop(file.path(getwd(),"file.h5ad does not exist."))
+message(paste0("Reading ",getwd(),"/file.h5ad..."))
+adata <- anndata$read_h5ad("file.h5ad")
+message("Converting ANN to SCE...")
+sce <- zellkonverter::AnnData2SCE(adata)
+message(paste0("Exporting ",getwd(),"/sce.Rds..."))
+saveRDS(sce,"sce.Rds")
+message("Completed.")
+
