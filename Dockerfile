@@ -27,14 +27,14 @@ WORKDIR /zell/work
 CMD conda run -n zell Rscript /zell/scripts/convert.R
 
 # BUILD
-# docker build -t zell:1.8 .
+# docker build -t zellkonverter:1.8.0 .
 
 # USAGE (assumes run directory contains file.h5ad)
-# docker run --user "$(id -u):$(id -g)" --rm -v ${PWD}:/zell/work zell:1.8
-# docker run --user "$(id -u):$(id -g)" --rm -v ${PWD}:/zell/work -ti zell:1.8 sh
+# docker run --user "$(id -u):$(id -g)" --rm -v ${PWD}:/zell/work zellkonverter:1.8.0
+# docker run --user "$(id -u):$(id -g)" --rm -v ${PWD}:/zell/work -ti zellkonverter:1.8.0 sh
 
 # SINGULARITY
-# docker save zell:1.8 -o zellkonverter.tar
+# docker save zellkonverter:1.8.0 -o zellkonverter.tar
 # singularity build --sandbox zellkonverter docker-archive://zellkonverter.tar
 # singularity build zellkonverter.sif zellkonverter
 # singularity run --bind ${PWD}:/zell/work zellkonverter.sif

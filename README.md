@@ -4,10 +4,10 @@
 
 This is a docker image built on top of the [zellkonverter](https://github.com/theislab/zellkonverter) R package to convert single-cell AnnData objects to SingleCellExperiment (SCE) class objects.
 
-Run this in a directory containing **file.h5ad**. The output file will be **sce.Rds**.
+Run this in a directory containing **file.h5ad**. The output file will be **sce.rds**.
 
 ```
-docker run --rm --user "$(id -u):$(id -g)" -v ${PWD}:/zell/work royfrancis/zellkonverter:1.8
+docker run --rm --user "$(id -u):$(id -g)" -v ${PWD}:/zell/work royfrancis/zellkonverter:1.8.0
 ```
 
 2022 • Roy Francis

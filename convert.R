@@ -5,7 +5,6 @@ message(paste0("Reading ",getwd(),"/file.h5ad..."))
 adata <- anndata$read_h5ad("file.h5ad")
 message("Converting ANN to SCE...")
 sce <- zellkonverter::AnnData2SCE(adata)
-message(paste0("Exporting ",getwd(),"/sce.Rds..."))
+message(paste0("Exporting ",getwd(),"/sce.rds..."))
 saveRDS(sce,"sce.Rds")
 message("Completed.")
-
