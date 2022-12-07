@@ -7,7 +7,7 @@ This is a docker image built on top of the [zellkonverter](https://github.com/th
 Run this in a directory containing **file.h5ad**. The output file will be **sce.Rds**.
 
 ```
-docker run --user "$(id -u):$(id -g)" --rm -v ${PWD}:/zell/work zellkonverter:1.8
+docker run --rm --user "$(id -u):$(id -g)" -v ${PWD}:/zell/work royfrancis/zellkonverter:1.8
 ```
 
 2022 • Roy Francis
